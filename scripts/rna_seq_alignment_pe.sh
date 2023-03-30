@@ -20,4 +20,4 @@ out_dir=/home/yutkueri/private/alignment/paired_end
 
 bwa mem ${assembly_file} ${read_dir}/trim_paired_${sample}_pass_1.fastq.gz ${read_dir}/trim_paired_${sample}_pass_2.fastq.gz | samtools view -b | samtools sort -o ${out_dir}/${sample}_${source}_aligned.bam
 
-bwa index ${out_dir}/${sample}_${source}_aligned.bam
+samtools index ${out_dir}/${sample}_${source}_aligned.bam
