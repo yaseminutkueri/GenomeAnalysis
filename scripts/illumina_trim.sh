@@ -16,4 +16,4 @@ module load trimmomatic/0.39
 read_dir=/home/yutkueri/private/raw_data/genomics_data/Illumina
 out_dir=/home/yutkueri/private/trimmed_data
 
-trimmomatic PE -phred33 ${read_dir}/* ${out_dir}/illumina_trimmed_paired_1.fq.gz ${out_dir}/illumina_trimmed_unpaired_1.fq.gz ${out_dir}/illumina_trimmed_paired_2.fq.gz ${out_dir}/illumina_trimmed_unpaired_2.fq.gz LEADING:3 TRAILING:3 MINLEN:36
+trimmomatic PE -phred33 ${read_dir}/* ${out_dir}/illumina_trimmed_paired_1.fq.gz ${out_dir}/illumina_trimmed_unpaired_1.fq.gz ${out_dir}/illumina_trimmed_paired_2.fq.gz ${out_dir}/illumina_trimmed_unpaired_2.fq.gz ILLUMINACLIP:/sw/bioinfo/trimmomatic/0.39/rackham/adapters/TruSeq3-PE.fa:2:30:10:2:True LEADING:3 TRAILING:3 MINLEN:36 
